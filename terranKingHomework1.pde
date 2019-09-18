@@ -6,6 +6,7 @@ int myColor = color(0,25,0);
 
 int c1,c2;
 Button b1, b2, b3, b4, b5, b6;
+int curFloor = 1;
 
 float n,n1;
 Textarea myTextareaA, ta1,ta2,ta3,ta4,ta5,ta6,d1,d2;
@@ -69,19 +70,21 @@ void setup() {
      .setFont(createFont("arial",40))
      ;
 
-   cp5.addButton("<  |  >")
+   cp5.addButton("CloseDoor")
      .setPosition(150,600)
      .setSize(200,100)
      .setValue(0)
      .setColorBackground(250)
+     .setCaptionLabel(">  |  <")
      .setFont(createFont("arial",40))
      ;
     
-   cp5.addButton(">  |  <")
+   cp5.addButton("OpenDoor")
      .setPosition(450,600)
      .setSize(200,100)
      .setValue(0)
      .setColorBackground(250)
+     .setCaptionLabel("<  |  >")
      .setFont(createFont("arial",40))
      ;
      
@@ -182,93 +185,76 @@ void draw() {
   //n += (1-n)* 0.1; 
 }
 
-public void controlEvent(ControlEvent theEvent) {
- // println(theEvent.getController().getName());
-  //text(theEvent.getController().getName(),100,300);
- // println("test");
-//  theEvent.setColorBackground(250);
+/*public void controlEvent() {
   n = 0;
-}
+}*/
 
 public void  Floor1(){
-
-   /*b1.setColorBackground(color(0,255,0));
-   try        
-   {
-      Thread.sleep(1000);
-   } 
-   catch(InterruptedException ex) 
-   {
-      Thread.currentThread().interrupt();
-   }
-   b1.setColorBackground(250);*/
-   myTextareaA.setText("1");
+  floorCount(1);
 }
 
 public void Floor2(){
- /*  b1.setColorBackground(color(0,255,0));
-   try        
-   {
-      Thread.sleep(1000);
-   } 
-   catch(InterruptedException ex) 
-   {
-      Thread.currentThread().interrupt();
-   }
-   b1.setColorBackground(250);*/
-   myTextareaA.setText("2");
+  
+  floorCount(2);
 }
 
 
 public void Floor3(){
-  /* b1.setColorBackground(color(0,255,0));
-   try        
-   {
-      Thread.sleep(1000);
-   } 
-   catch(InterruptedException ex) 
-   {
-      Thread.currentThread().interrupt();
-   }
-   b1.setColorBackground(250);*/
-   myTextareaA.setText("3");
+  floorCount(3);
 }
 
 public void Floor4(){
- /*  b1.setColorBackground(color(0,255,0));
-   try        
-   {
-      Thread.sleep(1000);
-   } 
-   catch(InterruptedException ex) 
-   {
-      Thread.currentThread().interrupt();
-   }
-   b1.setColorBackground(250);*/
-   myTextareaA.setText("4");
+  floorCount(4);
 }
 public void Floor5(){
-   myTextareaA.setText("5");
+  floorCount(5);
 }
 
 public void Floor6(){
-   myTextareaA.setText("6");
+  floorCount(6);
 }
-/*void mousePressed() {
- /* for (int i = 0; i < 6; i++) {
-    if (mouseY > height-30 && mouseY < height-10) {
-      int left = i*70+i*10+10;
-      if (mouseX > left && mouseX < left+70) {
-        for (int j = 0; j < 6; j++) isSelected[j] = false;
-        isSelected[i] = true;
-        break;
-      }
-    }
-  }*/
- /* if(controlP5.Controller.getId() == 1){
-    myTextareaA.setText("1");
+
+public void CloseDoor(){
+   myTextareaA.setText("> | <");
+   timeOut();
+   myTextareaA.setText(str(curFloor));
+}
+
+public void OpenDoor(){
+   myTextareaA.setText("< | >");
+   timeOut();
+   myTextareaA.setText(str(curFloor));
+}
+
+public void floorCount(int nextFloor){
+  if(curFloor == nextFloor){
   }
-  else if(controlP5.Button.getBooleanValue() == 2){
+  else if(curFloor > nextFloor){
+    while(curFloor > nextFloor){
+      timeOut();
+      myTextareaA.setText(str(curFloor));
+      curFloor--;
+      myTextareaA.setText(str(curFloor));
+    }
+  }
+  else if(curFloor < nextFloor){
+    while(curFloor < nextFloor){
+      timeOut();
+      myTextareaA.setText(str(curFloor));
+      curFloor++;
+      myTextareaA.setText(str(curFloor));
+    }
   }
   
-}*/
+}
+
+public void timeOut(){
+  try        
+     {
+        Thread.sleep(1000);
+     } 
+     catch(InterruptedException ex) 
+     {
+        Thread.currentThread().interrupt();
+     }
+}
