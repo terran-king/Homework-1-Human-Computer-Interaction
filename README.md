@@ -1,5 +1,5 @@
 # Homework-1-Human-Computer-Interaction
-[Presentation](Homework-1-Human-Computer-Interaction/README.md)
+[Presentation](https://github.com/terran-king/Homework-1-Human-Computer-Interaction/blob/master/README.md)
 
 ![](TerranHomeworkgif.gif)
 
