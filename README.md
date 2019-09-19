@@ -5,6 +5,8 @@
 
 [Demo](https://github.com/terran-king/Homework-1-Human-Computer-Interaction/blob/master/terranKingHomework1.pde)
 
+[Sketch](https://github.com/terran-king/Homework-1-Human-Computer-Interaction/blob/master/TerranKingHCISketch.jpg)
+
 ![](TerranHomeworkgif.gif)
 
 C:
