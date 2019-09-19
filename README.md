@@ -1,7 +1,7 @@
 # Homework-1-Human-Computer-Interaction
 
 
-![](.gif)
+![](TerranHomeworkgif.gif)
 C:
 This elevator was found at JCPenny. The elevator layout could be updated to tell the user what is on each floor. As well the button could have an audio cue that the button has been hit so one knows that the button has been hit.
 
