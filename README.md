@@ -1,5 +1,7 @@
 # Homework-1-Human-Computer-Interaction
 [Presentation](https://github.com/terran-king/Homework-1-Human-Computer-Interaction/blob/master/README.md)
+[Elevator Gif](https://github.com/terran-king/Homework-1-Human-Computer-Interaction/blob/master/TerranHomeworkgif.gif)
+[Demo](https://github.com/terran-king/Homework-1-Human-Computer-Interaction/blob/master/terranKingHomework1.pde)
 
 ![](TerranHomeworkgif.gif)
 
