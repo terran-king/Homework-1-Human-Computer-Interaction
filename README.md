@@ -1,5 +1,5 @@
 # Homework-1-Human-Computer-Interaction
-[Presentation](docs/README.md)
+[Presentation](Homework-1-Human-Computer-Interaction/README.md)
 
 ![](TerranHomeworkgif.gif)
 
